@@ -1,5 +1,9 @@
 __pycache__/
 .ipynb_checkpoints/
+*.json
+
+# Folders
 datasets/
 base_models/
-*.json
+LSTM-old/
+lightning_logs/
