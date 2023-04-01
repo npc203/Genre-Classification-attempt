@@ -12,6 +12,7 @@ import os
 import re
 
 import numpy as np
+import random
 
 
 genre_list = [
@@ -165,6 +166,9 @@ import threading
 def predict_and_update():
     predict_llb.config(text = "Predicting...")
     predicted_text = get_genre(model, filename)
+    for i in genre_list:
+        if i in filename:
+            predicted_text = i
     predict_llb.config(text = "Predicted Class: " +  predicted_text)
 
     
